@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Truck AI Copilot PRO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h2>🚛 Truck AI Copilot</h2>
+
+<!-- STATUS -->
+<div id="status" class="status offline">🔴 Offline</div>
+
+<input id="start" placeholder="Start (Dhaka)">
+<input id="end" placeholder="End (Chittagong)">
+
+<select id="mode">
+  <option value="normal">Normal</option>
+  <option value="highway">Highway Only</option>
+</select>
+
+<button onclick="findRoute()">🛣️ Route</button>
+<button onclick="suggestRoute()">🔁 Suggest</button>
+<button onclick="showTrips()">📊 History</button>
+<button onclick="startTracking()">📍 Live GPS</button>
+<button onclick="startOfflineGPS()">📡 Offline GPS</button>
+
+<h3>🎤 Voice AI</h3>
+<button onclick="startVoice()">🎤 Speak</button>
+<p id="voiceText">Say: route / location / history...</p>
+
+<div id="map"></div>
+<div id="info">Ready</div>
+
+<!-- 👨‍💻 DEVELOPER CARD -->
+<div class="dev-card">
+
+  <img src="me.jpg" class="dev-img">
+
+  <h3>Uzzal Hossan</h3>
+  <p>🚛 Truck Driver & App Developer</p>
+
+  <p>📞 +8801924281419</p>
+ <p>Gmail:uzzalhossan1419@gmail.com</p>
+ <p>🏠Meherpur,Khuln,Bangladesh.</p>
+  <div id="onlineStatus" class="online">🟢 Online</div>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
